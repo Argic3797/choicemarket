@@ -105,7 +105,7 @@ This status must be checked against actual implementation and execution evidence
 
 ## Notice — No Public Trading Offer
 
-**ChoiceMarket does not currently offer public real-money trading, accept customer deposits, or operate a public wagering or investment service.** All protocol testing described here uses testnet tokens with **no monetary value**.
+**ChoiceMarket does not offer real-money trading, accept customer deposits, or operate a public wagering or investment service.** All protocol testing described here uses testnet tokens with **no monetary value**.
 
 Nothing in this documentation is an offer, solicitation, investment advice, or invitation to trade or wager in any jurisdiction.
 

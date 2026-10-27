@@ -43,9 +43,9 @@ The initial binary trading engine uses an FPMM.
 
 ### Operator Authority and Trust Assumptions
 
-**Result proposal, review, and final-review decisions, as well as administrative actions such as closing Markets and pausing trading, involve designated accounts with defined powers.** In current test deployments, those operational roles are exercised by the project. Production role allocation, custody, and governance arrangements remain undecided.
+**Result proposal, review, and final-review decisions involve designated accounts with defined powers. Administrative powers also include pausing trading.** In current test deployments, those designated roles are exercised by the project. After applicable deadlines, certain lifecycle actions—including Market closing and timeout-based INVALID settlement—can be invoked permissionlessly. Production role allocation, custody, and governance arrangements remain undecided.
 
-These powers are constrained by on-chain rules, but their existence means ChoiceMarket must **not** be described as having fully decentralized or permissionless outcome determination.
+These powers are constrained by on-chain rules, but their existence means ChoiceMarket **does not currently have fully decentralized or permissionless outcome determination**.
 
 Administrative powers and user asset ownership are distinct responsibilities; the system's trust model does not treat every administrative role as the owner of user funds.
 
