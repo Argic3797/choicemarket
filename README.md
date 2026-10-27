@@ -30,6 +30,10 @@ Financial contracts, position accounting, consumer Market flows, wallet integrat
 
 Implementation, success in one controlled test, repeat-run reliability, independent security assurance, and production readiness are different milestones. See [Development Status](DEVELOPMENT_STATUS.md).
 
+## Project Website
+
+[ChoiceMarket](https://choicemarket.app) — an informational project landing page. The project does not offer real-money trading or accept deposits.
+
 ## Technical Documentation
 
 - [Architecture Overview](ARCHITECTURE.md) — Components, financial responsibilities, operator authority, and trust boundaries.
