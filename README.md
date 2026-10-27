@@ -34,6 +34,8 @@ Implementation, success in one controlled test, repeat-run reliability, independ
 
 [ChoiceMarket](https://choicemarket.app) — an informational project landing page. The project does not offer real-money trading or accept deposits.
 
+[Founder's essay: Why I'm Building On-chain Prediction Markets](https://medium.com/@qkrwjdgh2021/why-im-building-an-on-chain-prediction-market-aba97bd9d8bb) — the motivation behind ChoiceMarket, in the founder's own words.
+
 ## Technical Documentation
 
 - [Architecture Overview](ARCHITECTURE.md) — Components, financial responsibilities, operator authority, and trust boundaries.
