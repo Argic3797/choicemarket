@@ -2,7 +2,7 @@
 
 **Stage:** Active development / controlled testnet validation  
 **Primary integration-test network:** Base Sepolia  
-**Last updated:** November 9, 2026  
+**Last updated:** November 10, 2026  
 **Public real-money trading:** Not available  
 **Production readiness:** Not established
 
@@ -62,11 +62,13 @@ One controlled Base Sepolia V2 test instance completed its entire planned execut
 
 This is a **successful test of those specific configurations**, not evidence that every external wallet works or that repeated executions will always succeed.
 
-**Trading-session test, trading phase — November 2026**
+**Full controlled trading-session lifecycle — November 2026**
 
-On November 8, 2026, a controlled Base Sepolia test instance exercised the trading-session flow with an embedded-wallet account and **one third-party mobile-wallet configuration**. In both, after the user approved the session permission in their wallet, BUY and SELL trades executed without a wallet confirmation for each trade.
+Between November 8 and 9, 2026, a controlled Base Sepolia test instance completed its planned lifecycle with an embedded-wallet account and **one third-party mobile-wallet configuration**. After the user approved the session permission in their wallet, BUY and SELL trades executed without a wallet confirmation for each trade. The Market was then closed, its unchallenged result was settled and finalized, both accounts redeemed (claimed) their positions, and the session permissions were revoked and cleaned up.
 
-As of this update, the remaining steps of that instance are **not complete**: Market close and result processing, finalization, redemption, and the revocation and cleanup of the session permissions. This is a successful test of the **trading phase** in those specific configurations. It does not establish the complete lifecycle for this instance, other wallet configurations, or repeatability.
+This is a **successful test of those specific configurations**, not evidence that every external wallet works or that repeated executions will always succeed.
+
+The test also found a display issue: in one case the application showed no active trading permission while the permission was still active on-chain. The permission was revoked during cleanup. A fix, so that the application reflects the on-chain permission state, is planned before any public release.
 
 **Consumer integration**
 
@@ -80,7 +82,7 @@ As of this document's last update, repeat-run reliability and broader wallet-con
 
 Ongoing validation priorities include:
 
-- Completion of the November 2026 trading-session test instance through finalization, redemption, and session-permission revocation and cleanup.
+- Trading-permission display that always reflects the on-chain permission state.
 - Additional full lifecycle rehearsals and confirmation of repeatability.
 - External-wallet authentication and transaction signing across more configurations.
 - Sponsored transaction admission, consistency, failure handling, and recovery.
