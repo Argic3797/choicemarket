@@ -2,7 +2,7 @@
 
 **Stage:** Active development / controlled testnet validation  
 **Primary integration-test network:** Base Sepolia  
-**Last updated:** October 27, 2026  
+**Last updated:** November 9, 2026  
 **Public real-money trading:** Not available  
 **Production readiness:** Not established
 
@@ -33,6 +33,12 @@ This document distinguishes **implemented**, **tested in a particular controlled
 
 Supported gas sponsorship does not eliminate user authorization or establish universal wallet compatibility.
 
+### Trading Sessions (under testing)
+
+- A bounded trading-session permission. After the user approves it in their wallet, later trades within preset limits can run without a separate wallet confirmation for each trade.
+- The related code was merged into the main development branch on November 4, 2026.
+- A session module has been deployed on Base Sepolia for controlled testing. Trading sessions are not enabled in any production environment.
+
 ### Resolution, Operator Roles, and Evidence
 
 - On-chain Market closing, result proposal/challenge/review, and finalization.
@@ -56,6 +62,12 @@ One controlled Base Sepolia V2 test instance completed its entire planned execut
 
 This is a **successful test of those specific configurations**, not evidence that every external wallet works or that repeated executions will always succeed.
 
+**Trading-session test, trading phase — November 2026**
+
+On November 8, 2026, a controlled Base Sepolia test instance exercised the trading-session flow with an embedded-wallet account and **one third-party mobile-wallet configuration**. In both, after the user approved the session permission in their wallet, BUY and SELL trades executed without a wallet confirmation for each trade.
+
+As of this update, the remaining steps of that instance are **not complete**: Market close and result processing, finalization, redemption, and the revocation and cleanup of the session permissions. This is a successful test of the **trading phase** in those specific configurations. It does not establish the complete lifecycle for this instance, other wallet configurations, or repeatability.
+
 **Consumer integration**
 
 Market discovery, trading, position management, and resolution presentation are integrated into the application.
@@ -68,6 +80,7 @@ As of this document's last update, repeat-run reliability and broader wallet-con
 
 Ongoing validation priorities include:
 
+- Completion of the November 2026 trading-session test instance through finalization, redemption, and session-permission revocation and cleanup.
 - Additional full lifecycle rehearsals and confirmation of repeatability.
 - External-wallet authentication and transaction signing across more configurations.
 - Sponsored transaction admission, consistency, failure handling, and recovery.
@@ -79,6 +92,7 @@ Ongoing validation priorities include:
 ## 4. Not Yet Established
 
 - Production deployment authorization or public real-money trading.
+- Production enablement of trading sessions.
 - Broad independent external-user usability validation.
 - Comprehensive production security assurance, including any claim of a completed independent production security audit.
 - Final production operational controls, role custody, governance, and monitoring.
@@ -97,7 +111,11 @@ This document is **not an external security audit report** or a legal compliance
 
 These priorities are not a launch schedule.
 
-## 6. Documentation and Source Availability
+## 6. Separate Development Track: Order Book (CLOB)
+
+The first version (V1) uses the FPMM described above. A central limit order book (CLOB) design is being explored in a separate development track. It is **not a committed launch architecture**, it does not change the V1 design, and no timeline has been set.
+
+## 7. Documentation and Source Availability
 
 The main application and protocol source remain in a separate private repository. This proposed public-facing repository is an overview of the project's purpose, architecture, and current development status; it is **not an open-source release**.
 
